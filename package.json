@@ -1,0 +1,25 @@
+{
+  "name": "dogecc_connect",
+  "version": "1.0.0",
+  "description": "AIO solution for SoC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonh9/dogecc_connect.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonh9/dogecc_connect/issues"
+  },
+  "homepage": "https://github.com/jasonh9/dogecc_connect#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mosca": "^2.8.3",
+    "redis": "^2.8.0",
+    "socket.io": "^2.3.0"
+  }
+}
