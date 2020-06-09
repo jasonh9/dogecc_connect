@@ -1,7 +1,7 @@
 'use strict';
 
-var mosca = require('mosca')
-var ipInterface = require ('./utils/networkInterface')
+var mosca = require('mosca');
+var ipInterface = require ('./utils/networkInterface');
 
 var redisServer = {
   type: 'redis',
@@ -21,15 +21,16 @@ var moscaSettings = {
 };
 
 var server = new mosca.Server(moscaSettings);
+
 server.on('ready', setup);
 
 server.on('clientConnected', function(client) {
-	console.log('client connected', client.id);		
+	console.log('mqtt client connected', client.id);		
 });
 
 // fired when a message is received
 server.on('published', function(packet, client) {
-  console.log('Published', packet.topic, packet.payload);
+  console.log(packet.topic, packet.payload);
 });
 
 // fired when the mqtt server is ready
@@ -44,12 +45,4 @@ function setup() {
     Network Port : ${moscaSettings.port} 
     Application Backend : ${moscaSettings.backend.type}
     `)
-}
-
-const helloWorld = () => {
-  console.log('this is working :)')
-}
-
-module.exports = {
-  helloWorld : helloWorld()
 }
