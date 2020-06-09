@@ -8,4 +8,5 @@ Redis [Installation Instructions](https://redis.io/topics/quickstart)
 Start the redis server
 `$ redis-server`
 
-
+Flush and clear the cache  
+`$ redis-cli FLUSHALL`
