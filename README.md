@@ -2,7 +2,9 @@
 An all in one solution to connect your SoC devices, mqtt, redis, websockets
 
 ## Component architecture
-There are 3 components to this system, a broker, the butler, and the workers.
+<b>There are 3 components to this system, a broker, the butler, and the workers.</b>  
+
+<img src='./docu/component_diagram.svg' width='500' />  
 
 ### Broker
 Routes all the streams from the butler to the specified workers.
